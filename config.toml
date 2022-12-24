@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "Meta-OpenRAN"
 
 # Language settings
 contentDir = "content/en"
