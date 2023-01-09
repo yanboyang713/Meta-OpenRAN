@@ -12,7 +12,7 @@ description: >
 List all of required infrastucture
 {{% /pageinfo %}}
 
-Part 1:
+# Part 1:
 Overview:
 https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Cloud_gxiuck.png
 
@@ -72,7 +72,7 @@ https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.m
 
 This is all for Part One. When you done Part One, Please lets me know.
 
-Part Two:
+# Part Two:
 All of below services, please deploy to K8S or K3S
 
 + set-up package manager for Kubernetes
@@ -111,4 +111,8 @@ Deep Learning on Flink aims to integrate Flink and deep learning frameworks (e.g
 https://airflow.apache.org/
 Apache Airflow is an open-source workflow management platform for data engineering pipelines.
 
-
++ Set-up Log system
+We will use C++, Rust, Python, and R.
+Please, check vector and prometheus
+https://vector.dev/
+https://prometheus.io/
