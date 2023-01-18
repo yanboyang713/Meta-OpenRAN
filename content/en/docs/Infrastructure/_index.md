@@ -70,11 +70,6 @@ K3S also fine, if you don't want to set-up K8S
 you could use: autok3s
 https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md
 
-This is all for Part One. When you done Part One, Please lets me know.
-
-# Part Two:
-All of below services, please deploy to K8S or K3S
-
 + set-up package manager for Kubernetes
 You also could look at others PM
 Helm V2
@@ -83,6 +78,11 @@ Charts are easy to create, version, share, and publish — so start using Helm a
 
 + Install POSTGRESQL
 https://bitnami.com/stack/postgresql/helm
+
+This is all for Part One. When you done Part One, Please lets me know.
+
+# Part Two:
+All of below services, please deploy to K8S or K3S
 
 + Istio service mesh set-up
 A service mesh is a dedicated infrastructure layer for facilitating service-to-service communications between services or microservices, using a proxy.
@@ -116,3 +116,7 @@ We will use C++, Rust, Python, and R.
 Please, check vector and prometheus
 https://vector.dev/
 https://prometheus.io/
+
++ Rook
+Rook is an open source cloud-native storage orchestrator, providing the platform, framework, and support for Ceph storage to natively integrate with cloud-native environments.
+https://rook.io/docs/rook/v1.10/Getting-Started/intro/
