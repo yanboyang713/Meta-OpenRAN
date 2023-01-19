@@ -15,13 +15,16 @@ Please check: <a href=https://www.yanboyang.com/chronproxmox/#step-4-start-your-
 <a href=https://pve.proxmox.com/pve-docs/chapter-pvesdn.html>https://pve.proxmox.com/pve-docs/chapter-pvesdn.html</a></li></ul><p>Please, check with OVS: <a href=http://www.openvswitch.org/>http://www.openvswitch.org/</a>
 TWO ports for Computing, and two ports for Storage.</p><p><a href=https://pve.proxmox.com/wiki/Open_vSwitch>https://pve.proxmox.com/wiki/Open_vSwitch</a>
 Please, check Example 2: Bond + Bridge + Internal Ports</p><ul><li><p>Mikrotik RouterOS Bond set-up</p></li><li><p>Set-up Blobfuse2
-<a href=https://github.com/Azure/azure-storage-fuse>https://github.com/Azure/azure-storage-fuse</a></p></li></ul><p>Sample Configuration File in the attachment, named fileCacheConfig-test.yaml with access key</p><p>You may follow the steps like mount blobfuse2 with Docker: <a href=https://github.com/Azure/azure-storage-fuse/tree/main/docker>https://github.com/Azure/azure-storage-fuse/tree/main/docker</a></p><p>You can based on File Cashe Config
+<a href=https://github.com/Azure/azure-storage-fuse>https://github.com/Azure/azure-storage-fuse</a></p></li></ul><p>Sample Configuration File in the attachment, named fileCacheConfig-test.yaml with access key</p><p>You may follow the steps like mount blobfuse2 with Docker
+<a href=https://github.com/Azure/azure-storage-fuse/tree/main/docker>https://github.com/Azure/azure-storage-fuse/tree/main/docker</a></p><p>You can based on File Cashe Config
 <a href=https://github.com/Azure/azure-storage-fuse/blob/main/sampleFileCacheConfig.yaml>https://github.com/Azure/azure-storage-fuse/blob/main/sampleFileCacheConfig.yaml</a></p><p>My Azure Data lake(ADLS) access key already give to you, you need NOT create ADLS by yourself.</p><p>Mount DIR to RAM for now.</p><ul><li>K3S or K8S create
-If you never use K8S, please check: <a href=https://www.yanboyang.com/k8s/>https://www.yanboyang.com/k8s/</a></li></ul><p>K3s is a Kubernetes distribution that aims to simplify Kubernetes deployments. Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
+If you never use K8S, please check
+<a href=https://www.yanboyang.com/k8s/>https://www.yanboyang.com/k8s/</a></li></ul><p>K3s is a Kubernetes distribution that aims to simplify Kubernetes deployments. Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
 <a href=https://k3s.io/img/how-it-works-k3s-revised.svg>https://k3s.io/img/how-it-works-k3s-revised.svg</a></p><p>If you want to create K8S, it will be good.
 You could look Ansible and Terraform</p><p>K3S also fine, if you don&rsquo;t want to set-up K8S
 you could use: autok3s
-<a href=https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md>https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md</a></p><ul><li><p>Mount Blobfuse2 with K3S/K8S. You may check CSI: <a href=https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/>https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/</a></p></li><li><p>set-up package manager for Kubernetes
+<a href=https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md>https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md</a></p><ul><li><p>Mount Blobfuse2 with K3S/K8S. You may check CSI
+<a href=https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/>https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/</a></p></li><li><p>set-up package manager for Kubernetes
 You also could look at others PM
 Helm V2
 Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
