@@ -16,6 +16,11 @@ List all of required infrastucture
 Overview:
 https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Cloud_gxiuck.png
 
++ Proxmox VE Install
+https://www.proxmox.com/en/downloads/category/iso-images-pve
+
+https://www.yanboyang.com/proxmoxinstall/
+
 + mikrotik RouterOS license backup
 https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/
 
@@ -28,10 +33,6 @@ When you done, login Yuchen account
 + Mikrotik RouterOS Gateway set-up
 Please check: https://www.yanboyang.com/chronproxmox/#step-4-start-your-ros
 
-+ Proxmox VE Install
-https://www.proxmox.com/en/downloads/category/iso-images-pve
-
-https://www.yanboyang.com/proxmoxinstall/
 
 + Proxmox VE VXLAN set-up
 https://pve.proxmox.com/pve-docs/chapter-pvesdn.html
