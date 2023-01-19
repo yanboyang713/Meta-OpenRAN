@@ -19,6 +19,9 @@ https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Clou
 + mikrotik RouterOS license backup
 https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/
 
++ mikrotik RouterOS System backup
+https://wiki.mikrotik.com/wiki/Manual:System/Backup
+
 + Mikrotik RouterOS connect Uni WIFI: eduroam
 When you done, login Yuchen account
 
@@ -39,23 +42,21 @@ TWO ports for Computing, and two ports for Storage.
 https://pve.proxmox.com/wiki/Open_vSwitch
 Please, check Example 2: Bond + Bridge + Internal Ports
 
-We also need Ceph cluster
++ Mikrotik RouterOS Bond set-up
 
-+ Ceph cluster Set-up
-We have 3-node, if need buy HHD/SSD, please lets us know.
-Reference:
-1. https://packetpushers.net/proxmox-ceph-full-mesh-hci-cluster-w-dynamic-routing/
-2. https://pve.proxmox.com/wiki/Deploy_Hyper-Converged_Ceph_Cluster
-pveceph CLI tool could useful
-
-+ Blobfuse2 set-up
++ Set-up Blobfuse2
 https://github.com/Azure/azure-storage-fuse
+
+Sample Configuration File in the attachment, named fileCacheConfig-test.yaml with access key
+
+You may follow the steps like mount blobfuse2 with Docker: https://github.com/Azure/azure-storage-fuse/tree/main/docker
 
 You can based on File Cashe Config
 https://github.com/Azure/azure-storage-fuse/blob/main/sampleFileCacheConfig.yaml
 
-I will give you my Azure Data lake(ADLS) access key, you need NOT create ADLS by yourself.
-Mount DIR to our Ceph cluster.
+My Azure Data lake(ADLS) access key already give to you, you need NOT create ADLS by yourself.
+
+Mount DIR to RAM for now.
 
 + K3S or K8S create
 If you never use K8S, please check: https://www.yanboyang.com/k8s/
@@ -70,6 +71,8 @@ K3S also fine, if you don't want to set-up K8S
 you could use: autok3s
 https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md
 
++ Mount Blobfuse2 with K3S/K8S. You may check CSI: https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/
+
 + set-up package manager for Kubernetes
 You also could look at others PM
 Helm V2
@@ -82,6 +85,15 @@ https://bitnami.com/stack/postgresql/helm
 This is all for Part One. When you done Part One, Please lets me know.
 
 # Part Two:
+We also need Ceph cluster
+
++ Ceph cluster Set-up
+We have 3-node, if need buy HHD/SSD, please lets us know.
+Reference:
+1. https://packetpushers.net/proxmox-ceph-full-mesh-hci-cluster-w-dynamic-routing/
+2. https://pve.proxmox.com/wiki/Deploy_Hyper-Converged_Ceph_Cluster
+pveceph CLI tool could useful
+
 All of below services, please deploy to K8S or K3S
 
 + Istio service mesh set-up
