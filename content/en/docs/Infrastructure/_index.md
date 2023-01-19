@@ -49,7 +49,8 @@ https://github.com/Azure/azure-storage-fuse
 
 Sample Configuration File in the attachment, named fileCacheConfig-test.yaml with access key
 
-You may follow the steps like mount blobfuse2 with Docker: https://github.com/Azure/azure-storage-fuse/tree/main/docker
+You may follow the steps like mount blobfuse2 with Docker
+https://github.com/Azure/azure-storage-fuse/tree/main/docker
 
 You can based on File Cashe Config
 https://github.com/Azure/azure-storage-fuse/blob/main/sampleFileCacheConfig.yaml
@@ -59,7 +60,8 @@ My Azure Data lake(ADLS) access key already give to you, you need NOT create ADL
 Mount DIR to RAM for now.
 
 + K3S or K8S create
-If you never use K8S, please check: https://www.yanboyang.com/k8s/
+If you never use K8S, please check
+https://www.yanboyang.com/k8s/
 
 K3s is a Kubernetes distribution that aims to simplify Kubernetes deployments. Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
 https://k3s.io/img/how-it-works-k3s-revised.svg
@@ -71,7 +73,8 @@ K3S also fine, if you don't want to set-up K8S
 you could use: autok3s
 https://github.com/cnrancher/autok3s/blob/master/docs/i18n/en_us/native/README.md
 
-+ Mount Blobfuse2 with K3S/K8S. You may check CSI: https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/
++ Mount Blobfuse2 with K3S/K8S. You may check CSI
+https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/
 
 + set-up package manager for Kubernetes
 You also could look at others PM
