@@ -17,9 +17,18 @@ Overview:
 https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Cloud_gxiuck.png
 
 + Proxmox VE Install
-https://www.proxmox.com/en/downloads/category/iso-images-pve
+  - https://www.proxmox.com/en/downloads/category/iso-images-pve
 
-https://www.yanboyang.com/proxmoxinstall/
+  - https://www.yanboyang.com/proxmoxinstall/
+
+  - Network Configuration (Server1) :
+    - Hostname: server1.nicelab.us
+    - E-mail: byan4@ncsu.edu
+    - Password: Happyman2023
+    - IP Address: 192.168.88.2/24
+    - Gateway: 192.168.88.1
+    - DNS Server: 192.168.88.1
+
 
 + mikrotik RouterOS license backup
 https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/
