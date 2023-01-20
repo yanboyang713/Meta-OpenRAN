@@ -28,6 +28,14 @@ https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Clou
     - IP Address: 192.168.88.2/24
     - Gateway: 192.168.88.1
     - DNS Server: 192.168.88.1
+  
+  - Network Configuration (Server2) :
+    - Hostname: server2.nicelab.us
+    - E-mail: byan4@ncsu.edu
+    - Password: Happyman2023
+    - IP Address: 192.168.88.3/24
+    - Gateway: 192.168.88.1
+    - DNS Server: 192.168.88.1
 
 
 + mikrotik RouterOS license backup
