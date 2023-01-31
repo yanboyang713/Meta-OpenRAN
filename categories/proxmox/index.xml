@@ -1,4 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Proxmox</title><link>/categories/proxmox/</link><description>Recent content in Proxmox on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/proxmox/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Proxmox Installation</title><link>/docs/infrastructure/proxmox/installation/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/installation/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Storage are using ZFS (RAID0)&lt;/p>
+&lt;/div>
 &lt;h2 id="install">Installation&lt;/h2>
 &lt;p>I recommend you use USB Flash Drive as &lt;strong>Installation Medium&lt;/strong> because it is the faster option.&lt;/p>
 &lt;h3 id="download-the-installer-iso-image">Download the installer ISO image&lt;/h3>
