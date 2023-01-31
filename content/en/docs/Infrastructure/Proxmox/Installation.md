@@ -102,6 +102,7 @@ When you boot from USB, You will see the below image.
 
 -   Install Proxmox VE
     Starts the normal installation.
+    
     **NOTE:** It’s possible to use the installation wizard with a keyboard only. Buttons can be clicked by pressing the ALT key combined with the underlined character from the respective button. For example, ALT + N to press a Next button.
 
 -   Install Proxmox VE (Debug mode)
