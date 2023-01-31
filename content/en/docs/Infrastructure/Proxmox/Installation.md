@@ -8,6 +8,10 @@ date: 2023-01-31
 description: >
   A Step-by Step guide for Proxmox Installation
 ---
+{{% pageinfo %}}
+Storage are using ZFS (RAID0)
+{{% /pageinfo %}}
+
 
 ## Installation {#install}
 
