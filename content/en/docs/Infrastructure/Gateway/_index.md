@@ -13,6 +13,7 @@ description: >
 {{% /pageinfo %}}
 
 ## Overview
+![](https://res.cloudinary.com/dkvj6mo4c/image/upload/v1675145155/NICE-LAB/NICE-LAB_Gateway_djewfj.png)
 
 ## Installation Winbox
 ### Arch Linux
@@ -62,7 +63,7 @@ Click **Connect**
 + Router Identity: NICE-LAB
 + Password: NICElab2023
 
-[Link](https://wiki.mikrotik.com/wiki/Manual:Quickset#:~:text=Quickset%20is%20a%20simple%20configuration,of%20default%20configuration%20from%20factory.)
+[Official Link](https://wiki.mikrotik.com/wiki/Manual:Quickset#:~:text=Quickset%20is%20a%20simple%20configuration,of%20default%20configuration%20from%20factory.)
 
 Final Click **Apply**, then **OK**
 
