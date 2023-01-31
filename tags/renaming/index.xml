@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Renaming</title><link>/tags/renaming/</link><description>Recent content in Renaming on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/renaming/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Proxmox Renaming</title><link>/docs/infrastructure/proxmox/renaming/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/renaming/</guid><description>
+&lt;h2 id="renaming-a-pve-node">Renaming a PVE node&lt;/h2>
+&lt;p>/etc/hosts:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>127.0.0.1 localhost.localdomain localhost
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>10.172.14.61 pve.richie.corp.microsoft.com richie
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>## The following lines are desirable for IPv6 capable hosts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>::1 ip6-localhost ip6-loopback
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fe00::0 ip6-localnet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff00::0 ip6-mcastprefix
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::1 ip6-allnodes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::2 ip6-allrouters
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::3 ip6-allhosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/etc/hostname:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>richie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
