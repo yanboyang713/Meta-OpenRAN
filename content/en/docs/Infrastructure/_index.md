@@ -3,7 +3,7 @@
 title: "Infrastructure"
 linkTitle: "Infrastructure"
 weight: 2
-date: 2017-01-05
+date: 2023-01-31
 description: >
   List all of required infrastucture
 ---
@@ -11,6 +11,17 @@ description: >
 {{% pageinfo %}}
 List all of required infrastucture
 {{% /pageinfo %}}
+
+## Gateway Set-up
+NICE Lab Gateway INFO:
++ IP Address: 10.154.6.207
++ Netmask: 255.255.192.0 (/18)
++ Gateway: 10.154.0.1
+
+[More details, please check](./Gateway/_index.md)
+
+## Proxmox VE Set-up
+### Install
 
 # Part 1:
 Overview:
