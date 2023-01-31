@@ -18,7 +18,7 @@ NICE Lab Gateway INFO:
 + Netmask: 255.255.192.0 (/18)
 + Gateway: 10.154.0.1
 
-[More details, please check](./Gateway/_index.md)
+[More details, please check](./gateway/)
 
 ## Proxmox VE Set-up
 ### Install
