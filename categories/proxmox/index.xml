@@ -86,9 +86,8 @@ Runs memtest86+. This is useful to check if the memory is functional and free of
 &lt;/li>
 &lt;/ul>
 &lt;p>After selecting Install Proxmox VE and accepting the EULA, the prompt to select the target hard disk(s) will appear. The Options button opens the dialog to select the target file system.&lt;/p>
-&lt;p>The default file system is ext4. The Logical Volume Manager (LVM) is used when ext4 or xfs is selected. Additional options to restrict LVM space can be set (see below).&lt;/p>
-&lt;p>Proxmox VE can be installed on ZFS. As ZFS offers several software RAID levels, this is an option for systems that don’t have a hardware RAID controller. The target disks must be selected in the Options dialog. More ZFS specific settings can be changed under Advanced Options.&lt;/p>
-&lt;p>I choose Install Proxmox VE for new install.&lt;/p>
+&lt;p>The default file system is ext4. However, this testbed is using ZFS (RAID0).&lt;/p>
+&lt;p>&lt;strong>NOTE:&lt;/strong> On file based storages, snapshots are possible with the qcow2 format.&lt;/p>
 &lt;h4 id="step-2">Step 2:&lt;/h4>
 &lt;p>&lt;img src="https://pve.proxmox.com/pve-docs/images/screenshot/pve-select-location.png" alt="">
 The next page asks for basic configuration options like the location, the time zone, and keyboard layout. The location is used to select a download server close by to speed up updates. The installer usually auto-detects these settings. They only need to be changed in the rare case that auto detection fails or a different keyboard layout should be used.&lt;/p>
@@ -126,89 +125,7 @@ The next step shows a summary of the previously selected options. Re-check every
 &lt;/figure>
 &lt;p>If the installation failed check out specific errors on the second TTY (‘CTRL + ALT + F2’), ensure that the systems meets the minimum requirements. If the installation is still not working look at the how to get help chapter.&lt;/p>
 &lt;p>Further configuration is done via the Proxmox web interface. Point your browser to the IP address given during installation (&lt;a href="https://youripaddress:8006">https://youripaddress:8006&lt;/a>).&lt;/p>
-&lt;h4 id="advanced-lvm-configuration-options">Advanced LVM Configuration Options&lt;/h4>
-&lt;p>The installer creates a Volume Group (VG) called pve, and additional Logical Volumes (LVs) called root, data, and swap. To control the size of these volumes use:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>hdsize
-Defines the total hard disk size to be used. This way you can reserve free space on the hard disk for further partitioning (for example for an additional PV and VG on the same hard disk that can be used for LVM storage).&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>swapsize
-Defines the size of the swap volume. The default is the size of the installed memory, minimum 4 GB and maximum 8 GB. The resulting value cannot be greater than hdsize/8.&lt;/p>
-&lt;p>&lt;strong>NOTE:&lt;/strong> If set to 0, no swap volume will be created.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>maxroot
-Defines the maximum size of the root volume, which stores the operation system. The maximum limit of the root volume size is hdsize/4.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>maxvz
-Defines the maximum size of the data volume. The actual size of the data volume is:&lt;/p>
-&lt;p>&lt;strong>datasize = hdsize - rootsize - swapsize - minfree&lt;/strong>&lt;/p>
-&lt;p>Where datasize cannot be bigger than maxvz.&lt;/p>
-&lt;p>&lt;strong>NOTE:&lt;/strong> In case of LVM thin, the data pool will only be created if datasize is bigger than 4GB.
-&lt;strong>NOTE:&lt;/strong> If set to 0, no data volume will be created and the storage configuration will be adapted accordingly.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>minfree
-Defines the amount of free space left in the LVM volume group pve. With more than 128GB storage available the default is 16GB, else hdsize/8 will be used.&lt;/p>
-&lt;p>&lt;strong>NOTE:&lt;/strong> LVM requires free space in the VG for snapshot creation (not required for lvmthin snapshots).&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="how-to-update-proxmox-without-buying-a-subscription">How to update Proxmox without buying a subscription&lt;/h2>
-&lt;p>On the Proxmox website, they say: “Proxmox VE is a complete open-source platform for enterprise virtualization.” And typically you can’t charge for open source software; but the folks at Proxmox have done their best to scare most of us into buying a subscription — or, at least, to make us feel guilty for not having one.&lt;/p>
-&lt;p>Now, Proxmox is great software; and developing great software takes great resources, great developers… and great money. As such, I encourage you to purchase a subscription if you’re using Proxmox in a business environment. However, some of you may be interested in using it for home usage, or just to tinker around, and for any of a variety of reasons you may not wish to, or may not be able to, purchase a subscription. This section is for you.&lt;/p>
-&lt;p>To be clear, Proxmox works just fine without a license. The non-licensed version is just as functional as the paid version, with one exception: it doesn’t have access to the tested “enterprise” update repositories. As such (without the changes I’m about to show you), you can’t update the Debian software. Oh and of course, there’s that little nag screen each time you log in.&lt;/p>
-&lt;p>SSH into the Proxmox host, or access its console through the web interface, and make a copy of the pve-enterprise.list sources file, like so:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Step 1:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> root@pve ~# &lt;span style="color:#204a87">cd&lt;/span> /etc/apt/sources.list.d/
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>Step 2:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> root@pve ~# cp pve-enterprise.list pve-no-subscription.list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>Step 3:
-OK, so now we have a copy of the original file. If we ever purchase a subscription later and want to use the enterprise repositories, we’ll be able to revert what we’ve done very easily. For now, edit the original file and comment out its one line; save and close the file.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Step 4:
-Open the copied file, pve-no-subscription.list, and change the line ever so slightly. The original line looks something like this:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> deb https://enterprise.proxmox.com/debian/pve buster pve-enterprise
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The parts to note are https (change it to http,) enterprise.proxmox.com (change enterprise to download), and the end of the string — pve-enterprise (change to pve-no-subscription ). Do not edit the word stretch or buster, or any other word that appears in that position; that’s the Debian version code name. Your edited line should look like this:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> deb http://download.proxmox.com/debian/pve buster pve-no-subscription
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Save and close the file. Now, update the package lists&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Step 5:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> root@pve ~# apt-get update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>Step 6: And when that’s done, run software upgrades!&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root@pve ~# apt-get dist-upgrade
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Note:&lt;/strong> Always run dist-upgrade, not just &amp;ldquo;apt-get upgrade.&amp;rdquo; Dist-upgrade ensures that all packages and their dependencies are updated; if you just run “apt-get upgrade” things may break.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h2 id="renaming-a-pve-node">Renaming a PVE node&lt;/h2>
-&lt;p>/etc/hosts:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>127.0.0.1 localhost.localdomain localhost
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>10.172.14.61 pve.richie.corp.microsoft.com richie
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>## The following lines are desirable for IPv6 capable hosts
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>::1 ip6-localhost ip6-loopback
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fe00::0 ip6-localnet
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff00::0 ip6-mcastprefix
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::1 ip6-allnodes
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::2 ip6-allrouters
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::3 ip6-allhosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/etc/hostname:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>richie
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;h2 id="reference-list">Reference List&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://www.salvagedata.com/btrfs-zfs-xfs-ext4-how-are-they-different/">https://www.salvagedata.com/btrfs-zfs-xfs-ext4-how-are-they-different/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://linuxhint.com/zfs%5Fvs%5Fxfs/">https://linuxhint.com/zfs%5Fvs%5Fxfs/&lt;/a>&lt;/li>
