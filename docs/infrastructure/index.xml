@@ -56,4 +56,11 @@
 &lt;/ul>
 &lt;p>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:Quickset#:~:text=Quickset%20is%20a%20simple%20configuration,of%20default%20configuration%20from%20factory.">Official Link&lt;/a>&lt;/p>
 &lt;p>Final Click &lt;strong>Apply&lt;/strong>, then &lt;strong>OK&lt;/strong>&lt;/p>
-&lt;p>You could open a new Terminal, and ping google.com for testing.&lt;/p></description></item></channel></rss>
+&lt;p>You could open a new Terminal, and ping google.com for testing.&lt;/p></description></item><item><title>Docs: Proxmox VE</title><link>/docs/infrastructure/proxmox/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>We are using Proxmox VE to management all of our VMs and Linux Containners.&lt;/p>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Proxmox Virtual Environment is an open source server virtualization management solution based on QEMU/KVM and LXC. Proxmox VE is based on Debian. You can manage virtual machines, containers, highly available clusters, storage and networks with an integrated, easy-to-use web interface or via CLI.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>&lt;a href="./Installation.md">Step by step guidline details&lt;/a>&lt;/p></description></item></channel></rss>
