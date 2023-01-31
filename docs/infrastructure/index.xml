@@ -6,7 +6,10 @@
 &lt;h2 id="installation-winbox">Installation Winbox&lt;/h2>
 &lt;h3 id="arch-linux">Arch Linux&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">paru -S winbox
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="mikrotik-routeros-reset">Mikrotik RouterOS Reset&lt;/h2>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-winbox-login">Using Winbox Login&lt;/h2>
+&lt;p>Neighbors -&amp;gt; Refresh -&amp;gt; Click MAC address -&amp;gt; click Connect
+&lt;strong>NOTE:&lt;/strong> First time login, please use MAC address, defalt password is NULL.&lt;/p>
+&lt;h2 id="mikrotik-routeros-reset">Mikrotik RouterOS Reset&lt;/h2>
 &lt;h3 id="reset-from-routeros">Reset from RouterOS&lt;/h3>
 &lt;p>If you still have access to your router and want to recover its default configuration, then you can:&lt;/p>
 &lt;ul>
@@ -14,4 +17,42 @@
 &lt;li>do it from System -&amp;gt; Reset Configuration menu in the graphical user interface.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:Reset">Official Link&lt;/a>&lt;/p>
-&lt;h2 id="quick-set">Quick Set&lt;/h2></description></item></channel></rss>
+&lt;h2 id="quick-set">Quick Set&lt;/h2>
+&lt;p>Mode using CPE: Client device, which will connect to an Access Point (AP) device. Provides option to scan for AP devices in your area.&lt;/p>
+&lt;h3 id="wireless">Wireless&lt;/h3>
+&lt;ul>
+&lt;li>Band: 2Ghz-B/G/N&lt;/li>
+&lt;li>Channel Width: 20/40Mhz XX&lt;/li>
+&lt;li>Country: united states&lt;/li>
+&lt;li>Choice WIFI as WAN, Click Signal Strength could Sort&lt;/li>
+&lt;/ul>
+&lt;p>Click &lt;strong>Connect&lt;/strong>&lt;/p>
+&lt;h3 id="configure">Configure&lt;/h3>
+&lt;ul>
+&lt;li>Mode: Router&lt;/li>
+&lt;/ul>
+&lt;h3 id="wireless-network">Wireless Network&lt;/h3>
+&lt;ul>
+&lt;li>Address Acquisition: Automatic&lt;/li>
+&lt;li>Upload: unlimited&lt;/li>
+&lt;li>Download: unlimited&lt;/li>
+&lt;/ul>
+&lt;h3 id="local-network">Local Network&lt;/h3>
+&lt;ul>
+&lt;li>IP Address: 192.168.88.1&lt;/li>
+&lt;li>Netmask: 255.255.255.0 (/24)&lt;/li>
+&lt;li>DHCP - &lt;strong>Tick&lt;/strong>
+&lt;ul>
+&lt;li>DHCP Server Range: 192.168.88.10 - 192.168.88.254&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>NAT - &lt;strong>Tick&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h3 id="system">System&lt;/h3>
+&lt;ul>
+&lt;li>Router Identity: NICE-LAB&lt;/li>
+&lt;li>Password: NICElab2023&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:Quickset#:~:text=Quickset%20is%20a%20simple%20configuration,of%20default%20configuration%20from%20factory.">Link&lt;/a>&lt;/p>
+&lt;p>Final Click &lt;strong>Apply&lt;/strong>, then &lt;strong>OK&lt;/strong>&lt;/p>
+&lt;p>You could open a new Terminal, and ping google.com for testing.&lt;/p></description></item></channel></rss>
