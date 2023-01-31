@@ -1,1 +1,17 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Infrastructure</title><link>/docs/infrastructure/</link><description>Recent content in Infrastructure on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="/docs/infrastructure/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Infrastructure</title><link>/docs/infrastructure/</link><description>Recent content in Infrastructure on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="/docs/infrastructure/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Gateway</title><link>/docs/infrastructure/gateway/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gateway/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Step by step set-up Gateway&lt;/p>
+&lt;/div>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h2 id="installation-winbox">Installation Winbox&lt;/h2>
+&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">paru -S winbox
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="mikrotik-routeros-reset">Mikrotik RouterOS Reset&lt;/h2>
+&lt;h3 id="reset-from-routeros">Reset from RouterOS&lt;/h3>
+&lt;p>If you still have access to your router and want to recover its default configuration, then you can:&lt;/p>
+&lt;ul>
+&lt;li>run the command &amp;ldquo;/system reset-configuration&amp;rdquo; from command line interface&lt;/li>
+&lt;li>do it from System -&amp;gt; Reset Configuration menu in the graphical user interface.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:Reset">Official Link&lt;/a>&lt;/p>
+&lt;h2 id="quick-set">Quick Set&lt;/h2></description></item></channel></rss>
