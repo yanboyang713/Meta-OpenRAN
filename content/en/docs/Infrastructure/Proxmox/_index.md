@@ -16,7 +16,7 @@ We are using Proxmox VE to management all of our VMs and Linux Containners.
 Proxmox Virtual Environment is an open source server virtualization management solution based on QEMU/KVM and LXC. Proxmox VE is based on Debian. You can manage virtual machines, containers, highly available clusters, storage and networks with an integrated, easy-to-use web interface or via CLI.
 
 ## Installation
-[Step by step guidline details](./Installation.md)
+Step by step guidline details
 
-
+{{< ref "Installation.md" >}}
 
