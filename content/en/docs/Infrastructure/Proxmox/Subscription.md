@@ -2,7 +2,7 @@
 categories: ["Proxmox"]
 tags: ["VE", "Subscription"]
 title: "Proxmox Subscription"
-weight: 50
+weight: 60
 linkTitle: "Proxmox Subscription"
 date: 2023-01-31
 description: >

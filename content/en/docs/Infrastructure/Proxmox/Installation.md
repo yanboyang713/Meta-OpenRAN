@@ -2,7 +2,7 @@
 categories: ["Proxmox"]
 tags: ["VE"]
 title: "Proxmox Installation"
-weight: 48
+weight: 20
 linkTitle: "Proxmox Installation"
 date: 2023-01-31
 description: >

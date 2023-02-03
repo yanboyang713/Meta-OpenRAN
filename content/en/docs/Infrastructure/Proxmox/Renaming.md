@@ -2,7 +2,7 @@
 categories: ["Proxmox"]
 tags: ["VE", "Renaming"]
 title: "Proxmox Renaming"
-weight: 3
+weight: 52
 linkTitle: "Proxmox Renaming"
 date: 2023-01-31
 description: >
