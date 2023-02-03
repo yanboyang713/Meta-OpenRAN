@@ -1,4 +1,65 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Infrastructure</title><link>/docs/infrastructure/</link><description>Recent content in Infrastructure on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/docs/infrastructure/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Gateway</title><link>/docs/infrastructure/gateway/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gateway/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Infrastructure</title><link>/docs/infrastructure/</link><description>Recent content in Infrastructure on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/docs/infrastructure/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Console</title><link>/docs/infrastructure/console/</link><pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/console/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Console Machine Preparation: we need a &lt;strong>Console Machine&lt;/strong> to do some Networking and Cluster configuration.&lt;/p>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Management Console/Machine is another word for Console Machine, which will used for doing some of Networking configuration and Cluster configuration. So, we need set-up a Management Console first.&lt;/p>
+&lt;p>I highly recommend install &lt;a href="https://www.metascientificlinux.com/">Meta Scientific Linux&lt;/a> as your management console.
+&lt;a href="https://www.yanboyang.com">Boyang Yan&lt;/a> is the main founder for this Linux Distros. If you facing any issues, please email &lt;a href="mailto:yanboyang713@gmail.com">Boyang&lt;/a>.&lt;/p>
+&lt;h2 id="createdelete-user">Create/Delete User&lt;/h2>
+&lt;h3 id="create-new-sudo-user">Create new SUDO user&lt;/h3>
+&lt;p>Each Testbed user should have their own sudo user. Run the following command to create a new user, for example &lt;strong>ostechnix&lt;/strong>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">useradd --create-home ostechnix
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set password to the new user:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">passwd ostechnix
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We have created a new user named &lt;strong>ostechnix&lt;/strong>. We haven&amp;rsquo;t granted the sudo privilege to the user yet. You can verify if the user is sudo user or not using command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">sudo -lU ostechnix
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample output:&lt;/p>
+&lt;pre tabindex="0">&lt;code>User ostechnix is not allowed to run sudo on archlinux.
+&lt;/code>&lt;/pre>&lt;p>Yes, the user is not yet allowed to perform administrative tasks. Let us go ahead and grant him the sudo permissions.&lt;/p>
+&lt;p>To add a normal user to sudoers list in Arch Linux, simply add him/her to the wheel group. For those wondering, the wheel is a special group in some Unix-like operating systems. All the members of wheel group are allowed to perform administrative tasks. Wheel group is similar to sudo group in Debian-based systems.&lt;/p>
+&lt;p>We can add users using chmod command.
+To add an user to sudoers ist in Arch Linux, run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">usermod -aG wheel ostechnix
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Or,&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">usermod --append --groups wheel ostechnix
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above command will add the user called ostechnix to &amp;ldquo;wheel&amp;rdquo; group. As stated already, the members of wheel group can perform administrative tasks using sudo command.
+Next, edit /etc/sudoers file using command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo vim /etc/sudoers
+&lt;/code>&lt;/pre>&lt;p>Find and uncomment the following line (just remove the # symbol at the beginning of the line):&lt;/p>
+&lt;pre tabindex="0">&lt;code>%wheel ALL=(ALL) ALL
+&lt;/code>&lt;/pre>&lt;p>Hit ESC key and type :wq to save the file and exit.&lt;/p>
+&lt;p>Check if an user has sudo access in Arch Linux. To check if an user has sudo permissions, run:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo -lU ostechnix
+&lt;/code>&lt;/pre>&lt;p>Sample output:&lt;/p>
+&lt;pre tabindex="0">&lt;code>User ostechnix may run the following commands on archlinux:
+(ALL) ALL
+&lt;/code>&lt;/pre>&lt;h3 id="delete-sudo-privileges-from-an-user-in-arch-linux">Delete sudo privileges from an user in Arch Linux&lt;/h3>
+&lt;p>We can take away the sudo privileges from an user without actually having to delete the user.&lt;/p>
+&lt;p>First, log out from the user and log back in as root or another sudo user. Next, delete sudo privileges from an user by simply removing him/her from the wheel group using the following command in Arch Linux:&lt;/p>
+&lt;pre tabindex="0">&lt;code>gpasswd -d ostechnix wheel
+&lt;/code>&lt;/pre>&lt;p>If you have added the user to sudo group, you need to remove him/her from that group too.&lt;/p>
+&lt;pre tabindex="0">&lt;code>gpasswd -d ostechnix sudo
+&lt;/code>&lt;/pre>&lt;p>That&amp;rsquo;s it. The user is not in the sudoers list anymore, so he can&amp;rsquo;t run any administrative tasks.&lt;/p>
+&lt;p>You can verify it using command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo -lU ostechnix
+&lt;/code>&lt;/pre>&lt;p>If you don&amp;rsquo;t want that user anymore, remove him entirely from the system using this command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>userdel -r ostechnix
+&lt;/code>&lt;/pre>&lt;p>Here, -r flag is used to delete the &lt;strong>$HOME&lt;/strong> directory of the user.&lt;/p>
+&lt;h2 id="user-logout">User logout&lt;/h2>
+&lt;p>Each user when finished to use management console, please logout for your account.&lt;/p>
+&lt;h3 id="i3-wm">I3 WM&lt;/h3>
+&lt;ol>
+&lt;li>Win + 0&lt;/li>
+&lt;li>e(xit)&lt;/li>
+&lt;/ol>
+&lt;h3 id="meta-wm">Meta WM&lt;/h3>
+&lt;p>Run command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo pkill -KILL -u YourUserName
+&lt;/code>&lt;/pre>&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/">https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Gateway</title><link>/docs/infrastructure/gateway/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gateway/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Step by step set-up Gateway&lt;/p>
 &lt;/div>
@@ -63,65 +124,4 @@
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>Proxmox Virtual Environment is an open source server virtualization management solution based on QEMU/KVM and LXC. Proxmox VE is based on Debian. You can manage virtual machines, containers, highly available clusters, storage and networks with an integrated, easy-to-use web interface or via CLI.&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>&lt;a href="/docs/infrastructure/proxmox/installation/">Step by step guidline details&lt;/a>&lt;/p></description></item><item><title>Docs: Console</title><link>/docs/infrastructure/console/</link><pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/console/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>Console Machine Preparation: we need a &lt;strong>Console Machine&lt;/strong> to do some Networking and Cluster configuration.&lt;/p>
-&lt;/div>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>Management Console/Machine is another word for Console Machine, which will used for doing some of Networking configuration and Cluster configuration. So, we need set-up a Management Console first.&lt;/p>
-&lt;p>I highly recommend install &lt;a href="https://www.metascientificlinux.com/">Meta Scientific Linux&lt;/a> as your management console.
-&lt;a href="https://www.yanboyang.com">Boyang Yan&lt;/a> is the main founder for this Linux Distros. If you facing any issues, please email &lt;a href="mailto:yanboyang713@gmail.com">Boyang&lt;/a>.&lt;/p>
-&lt;h2 id="createdelete-user">Create/Delete User&lt;/h2>
-&lt;h3 id="create-new-sudo-user">Create new SUDO user&lt;/h3>
-&lt;p>Each Testbed user should have their own sudo user. Run the following command to create a new user, for example &lt;strong>ostechnix&lt;/strong>:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">useradd --create-home ostechnix
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set password to the new user:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">passwd ostechnix
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We have created a new user named &lt;strong>ostechnix&lt;/strong>. We haven&amp;rsquo;t granted the sudo privilege to the user yet. You can verify if the user is sudo user or not using command:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">sudo -lU ostechnix
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample output:&lt;/p>
-&lt;pre tabindex="0">&lt;code>User ostechnix is not allowed to run sudo on archlinux.
-&lt;/code>&lt;/pre>&lt;p>Yes, the user is not yet allowed to perform administrative tasks. Let us go ahead and grant him the sudo permissions.&lt;/p>
-&lt;p>To add a normal user to sudoers list in Arch Linux, simply add him/her to the wheel group. For those wondering, the wheel is a special group in some Unix-like operating systems. All the members of wheel group are allowed to perform administrative tasks. Wheel group is similar to sudo group in Debian-based systems.&lt;/p>
-&lt;p>We can add users using chmod command.
-To add an user to sudoers ist in Arch Linux, run:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">usermod -aG wheel ostechnix
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Or,&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">usermod --append --groups wheel ostechnix
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above command will add the user called ostechnix to &amp;ldquo;wheel&amp;rdquo; group. As stated already, the members of wheel group can perform administrative tasks using sudo command.
-Next, edit /etc/sudoers file using command:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo vim /etc/sudoers
-&lt;/code>&lt;/pre>&lt;p>Find and uncomment the following line (just remove the # symbol at the beginning of the line):&lt;/p>
-&lt;pre tabindex="0">&lt;code>%wheel ALL=(ALL) ALL
-&lt;/code>&lt;/pre>&lt;p>Hit ESC key and type :wq to save the file and exit.&lt;/p>
-&lt;p>Check if an user has sudo access in Arch Linux. To check if an user has sudo permissions, run:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo -lU ostechnix
-&lt;/code>&lt;/pre>&lt;p>Sample output:&lt;/p>
-&lt;pre tabindex="0">&lt;code>User ostechnix may run the following commands on archlinux:
-(ALL) ALL
-&lt;/code>&lt;/pre>&lt;h3 id="delete-sudo-privileges-from-an-user-in-arch-linux">Delete sudo privileges from an user in Arch Linux&lt;/h3>
-&lt;p>We can take away the sudo privileges from an user without actually having to delete the user.&lt;/p>
-&lt;p>First, log out from the user and log back in as root or another sudo user. Next, delete sudo privileges from an user by simply removing him/her from the wheel group using the following command in Arch Linux:&lt;/p>
-&lt;pre tabindex="0">&lt;code>gpasswd -d ostechnix wheel
-&lt;/code>&lt;/pre>&lt;p>If you have added the user to sudo group, you need to remove him/her from that group too.&lt;/p>
-&lt;pre tabindex="0">&lt;code>gpasswd -d ostechnix sudo
-&lt;/code>&lt;/pre>&lt;p>That&amp;rsquo;s it. The user is not in the sudoers list anymore, so he can&amp;rsquo;t run any administrative tasks.&lt;/p>
-&lt;p>You can verify it using command:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo -lU ostechnix
-&lt;/code>&lt;/pre>&lt;p>If you don&amp;rsquo;t want that user anymore, remove him entirely from the system using this command:&lt;/p>
-&lt;pre tabindex="0">&lt;code>userdel -r ostechnix
-&lt;/code>&lt;/pre>&lt;p>Here, -r flag is used to delete the &lt;strong>$HOME&lt;/strong> directory of the user.&lt;/p>
-&lt;h2 id="user-logout">User logout&lt;/h2>
-&lt;p>Each user when finished to use management console, please logout for your account.&lt;/p>
-&lt;h3 id="i3-wm">I3 WM&lt;/h3>
-&lt;ol>
-&lt;li>Win + 0&lt;/li>
-&lt;li>e(xit)&lt;/li>
-&lt;/ol>
-&lt;h3 id="meta-wm">Meta WM&lt;/h3>
-&lt;p>Run command:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo pkill -KILL -u YourUserName
-&lt;/code>&lt;/pre>&lt;h2 id="reference-list">Reference List&lt;/h2>
-&lt;ol>
-&lt;li>&lt;a href="https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/">https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/&lt;/a>&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;p>&lt;a href="/docs/infrastructure/proxmox/installation/">Step by step guidline details&lt;/a>&lt;/p></description></item></channel></rss>
