@@ -2,7 +2,7 @@
 ---
 title: "Console"
 linkTitle: "Console"
-weight: 20
+weight: 42
 date: 2023-02-02
 description: >
   Console Preparation: required a Console Machine for configuration Networking and Cluster.
