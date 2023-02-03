@@ -1,20 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Proxmox</title><link>/categories/proxmox/</link><description>Recent content in Proxmox on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/proxmox/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Proxmox Renaming</title><link>/docs/infrastructure/proxmox/renaming/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/renaming/</guid><description>
-&lt;h2 id="renaming-a-pve-node">Renaming a PVE node&lt;/h2>
-&lt;p>/etc/hosts:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>127.0.0.1 localhost.localdomain localhost
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>10.172.14.61 pve.richie.corp.microsoft.com richie
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>## The following lines are desirable for IPv6 capable hosts
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>::1 ip6-localhost ip6-loopback
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fe00::0 ip6-localnet
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff00::0 ip6-mcastprefix
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::1 ip6-allnodes
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::2 ip6-allrouters
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::3 ip6-allhosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/etc/hostname:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>richie
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Proxmox Installation</title><link>/docs/infrastructure/proxmox/installation/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/installation/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta OpenRAN – Proxmox</title><link>/categories/proxmox/</link><description>Recent content in Proxmox on Meta OpenRAN</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/proxmox/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Proxmox Installation</title><link>/docs/infrastructure/proxmox/installation/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/installation/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Storage are using ZFS (RAID0)&lt;/p>
 &lt;/div>
@@ -149,7 +133,23 @@ The next step shows a summary of the previously selected options. Re-check every
 &lt;li>&lt;a href="https://www.salvagedata.com/btrfs-zfs-xfs-ext4-how-are-they-different/">https://www.salvagedata.com/btrfs-zfs-xfs-ext4-how-are-they-different/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://linuxhint.com/zfs%5Fvs%5Fxfs/">https://linuxhint.com/zfs%5Fvs%5Fxfs/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://pve.proxmox.com/wiki/Renaming%5Fa%5FPVE%5Fnode">https://pve.proxmox.com/wiki/Renaming%5Fa%5FPVE%5Fnode&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title>Docs: Proxmox Subscription</title><link>/docs/infrastructure/proxmox/subscription/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/subscription/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Proxmox Renaming</title><link>/docs/infrastructure/proxmox/renaming/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/renaming/</guid><description>
+&lt;h2 id="renaming-a-pve-node">Renaming a PVE node&lt;/h2>
+&lt;p>/etc/hosts:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>127.0.0.1 localhost.localdomain localhost
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>10.172.14.61 pve.richie.corp.microsoft.com richie
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>## The following lines are desirable for IPv6 capable hosts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>::1 ip6-localhost ip6-loopback
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fe00::0 ip6-localnet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff00::0 ip6-mcastprefix
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::1 ip6-allnodes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::2 ip6-allrouters
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ff02::3 ip6-allhosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/etc/hostname:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>richie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Proxmox Subscription</title><link>/docs/infrastructure/proxmox/subscription/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/proxmox/subscription/</guid><description>
 &lt;h2 id="how-to-update-proxmox-without-buying-a-subscription">How to update Proxmox without buying a subscription&lt;/h2>
 &lt;p>On the Proxmox website, they say: “Proxmox VE is a complete open-source platform for enterprise virtualization.” And typically you can’t charge for open source software; but the folks at Proxmox have done their best to scare most of us into buying a subscription — or, at least, to make us feel guilty for not having one.&lt;/p>
 &lt;p>Now, Proxmox is great software; and developing great software takes great resources, great developers… and great money. As such, I encourage you to purchase a subscription if you’re using Proxmox in a business environment. However, some of you may be interested in using it for home usage, or just to tinker around, and for any of a variety of reasons you may not wish to, or may not be able to, purchase a subscription. This section is for you.&lt;/p>
