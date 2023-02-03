@@ -61,14 +61,7 @@ Next, edit /etc/sudoers file using command:&lt;/p>
 &lt;li>&lt;a href="https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/">https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/&lt;/a>&lt;/li>
 &lt;/ol></description></item><item><title>Docs: Gateway</title><link>/docs/infrastructure/gateway/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gateway/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>In this section, all related to how to a NAT gateway.
-Our Testbed Gateway INFO:&lt;/p>
-&lt;ul>
-&lt;li>MAC Address: &lt;strong>DC:2C:6E:3E:01:45&lt;/strong>&lt;/li>
-&lt;li>Ip Address: &lt;strong>192.168.88.1&lt;/strong>&lt;/li>
-&lt;li>User Name: admin&lt;/li>
-&lt;li>Password: NICElab2023&lt;/li>
-&lt;/ul>
+&lt;p>In this section, all related to how to a NAT gateway.&lt;/p>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;img src="https://res.cloudinary.com/dkvj6mo4c/image/upload/v1675145155/NICE-LAB/NICE-LAB_Gateway_djewfj.png" alt="">&lt;/p>
