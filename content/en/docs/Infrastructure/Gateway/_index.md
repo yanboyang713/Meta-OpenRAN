@@ -9,7 +9,12 @@ description: >
 ---
 
 {{% pageinfo %}}
-  Step by step set-up Gateway
+  In this section, all related to how to a NAT gateway.
+  Our Testbed Gateway INFO:
+  + MAC Address: **DC:2C:6E:3E:01:45**
+  + Ip Address: **192.168.88.1**
+  + User Name: admin
+  + Password: NICElab2023
 {{% /pageinfo %}}
 
 ## Overview
