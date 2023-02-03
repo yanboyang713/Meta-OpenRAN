@@ -2,7 +2,7 @@
 ---
 title: "Proxmox VE"
 linkTitle: "Proxmox VE"
-weight: 2
+weight: 60
 date: 2023-01-31
 description: >
   info for Proxmox VE

@@ -2,7 +2,7 @@
 ---
 title: "Gateway"
 linkTitle: "Gateway"
-weight: 1
+weight: 40
 date: 2023-01-30
 description: >
   Step by step set-up Gateway
