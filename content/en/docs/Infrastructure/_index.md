@@ -5,48 +5,69 @@ linkTitle: "Infrastructure"
 weight: 40
 date: 2023-01-31
 description: >
-  List all of required infrastucture
+  All of required infrastucture set up
 ---
 
 {{% pageinfo %}}
-List all of required infrastucture
+All of required infrastucture set up guideline and INFO.
 {{% /pageinfo %}}
 
-## Gateway Set-up
-NICE Lab Gateway INFO:
-+ IP Address: 10.154.6.207
-+ Netmask: 255.255.192.0 (/18)
-+ Gateway: 10.154.0.1
+## Console - DONE
+[More details, please check](./console/)
+
+## Gateway - DOME
+Our Testbed Gateway **LAN** INFO:
+  + MAC Address: **DC:2C:6E:3E:01:45**
+  + Ip Address: **192.168.88.1**
+  + User Name: admin
+  + Password: NICElab2023
+
+NICE Lab Gateway **WAN** INFO:
+  + IP Address: 10.154.6.207
+  + Netmask: 255.255.192.0 (/18)
+  + Gateway: 10.154.0.1
 
 [More details, please check](./gateway/)
 
-## Proxmox VE Set-up
-### Install
+## Proxmox VE - DONE
+  - Server 1:
+    - Hostname: server1.nicelab.us
+    - E-mail: byan4@ncsu.edu
+    - Password:  NICElab2023
+    - IP Address: 192.168.88.4/24
+    - Gateway: 192.168.88.1
+    - DNS Server: 192.168.88.1
+    - Web GUI: https://192.168.88.4:8006
+    - Note: CPU server
+  
+  - Server 2:
+    - Hostname: server2.nicelab.us
+    - E-mail: byan4@ncsu.edu
+    - Password: NICElab2023
+    - IP Address: 192.168.88.3/24
+    - Gateway: 192.168.88.1
+    - DNS Server: 192.168.88.1
+    - Web GUI: https://192.168.88.3:8006
+    - Note: GPU server
+    
+  - Server 3:
+    - Hostname: server3.nicelab.us
+    - E-mail: byan4@ncsu.edu
+    - Password: NICElab2023
+    - IP Address: 192.168.88.2/24
+    - Gateway: 192.168.88.1
+    - DNS Server: 192.168.88.1
+    - Web GUI: https://192.168.88.2:8006
+    - Note: CPU server
+
+[More details, please check](./proxmox/)
+
+
 
 # Part 1:
 Overview:
 https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Cloud_gxiuck.png
 
-+ Proxmox VE Install
-  - https://www.proxmox.com/en/downloads/category/iso-images-pve
-
-  - https://www.yanboyang.com/proxmoxinstall/
-
-  - Network Configuration (Server1) :
-    - Hostname: server1.nicelab.us
-    - E-mail: byan4@ncsu.edu
-    - Password: Happyman2023
-    - IP Address: 192.168.88.2/24
-    - Gateway: 192.168.88.1
-    - DNS Server: 192.168.88.1
-  
-  - Network Configuration (Server2) :
-    - Hostname: server2.nicelab.us
-    - E-mail: byan4@ncsu.edu
-    - Password: Happyman2023
-    - IP Address: 192.168.88.3/24
-    - Gateway: 192.168.88.1
-    - DNS Server: 192.168.88.1
 
 
 + mikrotik RouterOS license backup
