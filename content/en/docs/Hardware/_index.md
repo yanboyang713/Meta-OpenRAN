@@ -1,7 +1,7 @@
 ---
 title: "Hardwares"
 linkTitle: "Hardwares"
-weight: 1
+weight: 20
 description: >
   List all of Hardwares Pre-required
 ---

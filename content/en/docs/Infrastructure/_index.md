@@ -2,7 +2,7 @@
 ---
 title: "Infrastructure"
 linkTitle: "Infrastructure"
-weight: 2
+weight: 40
 date: 2023-01-31
 description: >
   List all of required infrastucture
