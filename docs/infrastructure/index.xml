@@ -128,7 +128,67 @@ Next, edit /etc/sudoers file using command:&lt;/p>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>&lt;a href="https://docs.openvswitch.org/en/latest/topics/bonding/">https://docs.openvswitch.org/en/latest/topics/bonding/&lt;/a>&lt;/p>
 &lt;/div>
-&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;h2 id="install-open-vswitch">Install Open vSwitch&lt;/h2>
+&lt;p>Update the package index and then install the Open vSwitch and ifupdown2 packages by executing:
+&lt;strong>NOTE:&lt;/strong> In the version of Proxmox we are using, the package ifupdown2 is installed. Why is that important? Originally in Debian you have to reboot the whole server in order to apply changes to network settings. The ifupdown2 package allows us to apply changes without the reboot.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">apt update
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">apt install ifupdown2
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">apt install openvswitch-switch
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Before edit &lt;strong>/etc/network/interfaces&lt;/strong>, please backup this file.&lt;/p>
+&lt;pre tabindex="0">&lt;code>cp /etc/network/interfaces /etc/network/interfaces.backup
+&lt;/code>&lt;/pre>&lt;p>Editing:&lt;/p>
+&lt;pre tabindex="0">&lt;code>vi /etc/network/interfaces
+&lt;/code>&lt;/pre>&lt;p>File:&lt;/p>
+&lt;pre tabindex="0">&lt;code>auto lo
+iface lo inet loopback
+auto enp1s0
+iface enp1s0 inet manual
+auto enp2s0
+iface enp2s0 inet manual
+auto enp3s0
+iface enp3s0 inet manual
+auto enp4s0
+iface enp4s0 inet manual
+auto enp5s0
+iface enp5s0 inet manual
+auto enp6s0
+iface enp6s0 inet manual
+auto vlan1
+iface vlan1 inet static
+address 192.168.88.4/24
+gateway 192.168.88.1
+ovs_type OVSIntPort
+ovs_bridge vmbr0
+ovs_options vlan_mode=access
+ovs_extra set interface ${IFACE} external-ids:iface-id=$(hostname -s)-${IFACE}-vif
+dns-nameservers 192.168.88.1 8.8.8.8 8.8.4.4
+auto bond0
+iface bond0 inet manual
+ovs_bonds enp1s0 enp2s0 enp3s0 enp4s0 enp5s0
+ovs_type OVSBond
+ovs_bridge vmbr0
+ovs_options vlan_mode=native-untagged bond_mode=balance-slb
+auto vmbr0
+iface vmbr0 inet manual
+ovs_type OVSBridge
+ovs_ports bond0 vlan1
+&lt;/code>&lt;/pre>&lt;p>Apply:&lt;/p>
+&lt;pre tabindex="0">&lt;code>ifreload -a
+ifup vmbr0
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>/interface bridge port
+remove [ find interface=ether1 ]
+remove [ find interface=ether2 ]
+remove [ find interface=ether3 ]
+remove [ find interface=ether4 ]
+remove [ find interface=ether5 ]
+&lt;/code>&lt;/pre>&lt;p>To move to the top level again, type &amp;quot; / &amp;quot;&lt;/p>
+&lt;pre tabindex="0">&lt;code>/interface bonding add mode=balance-alb slaves=ether1,ether2,ether3,ether4,ether5 primary=ether1 name=bond1
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>/interface bridge port
+add bridge=bridge interface=bond1
+&lt;/code>&lt;/pre>&lt;p>Speed Test:&lt;/p>
+&lt;pre tabindex="0">&lt;code>/tool/speed-test address=192.168.88.1
+&lt;/code>&lt;/pre>&lt;h2 id="reference-list">Reference List&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://docs.openvswitch.org/en/latest/topics/bonding/">https://docs.openvswitch.org/en/latest/topics/bonding/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://karneliuk.com/2021/08/infrastructure-1-building-virtualized-environment-with-debian-linux-and-proxmox-on-hp-and-supermicro/">https://karneliuk.com/2021/08/infrastructure-1-building-virtualized-environment-with-debian-linux-and-proxmox-on-hp-and-supermicro/&lt;/a>&lt;/li>
 &lt;/ol></description></item></channel></rss>
