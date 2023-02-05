@@ -62,7 +62,16 @@ NICE Lab Gateway **WAN** INFO:
 
 [More details, please check](./proxmox/)
 
-
+## Bonding - DONE
+Server 1:
+| Server Port Num | Server Mac Address | Server Port Name | Connect TO | Gateway Port Num | Gateway Mac Address | Gateway Port Name |
+|-----------------|--------------------|------------------|------------|------------------|---------------------|-------------------|
+| ETH0            | 00:90:27:e0:e6:5c  | enp1s0           | TO         | Num 1            | DC:2C:6E:3E:01:2E   | ether1            |
+| ETH1            | 00:90:27:e0:e6:5d  | enp2s0           |            |                  |                     |                   |
+| ETH2            | 00:90:27:e0:e6:5e  | enp3s0           |            |                  |                     |                   |
+| ETH3            | 00:90:27:e0:e6:5f  | enp4s0           |            |                  |                     |                   |
+| ETH4            | 00:90:27:e0:e6:60  | enp5s0           |            |                  |                     |                   |
+| ETH5            | 00:90:27:e0:e6:61  | enp6s0           |            |                  |                     |                   |
 
 # Part 1:
 Overview:
