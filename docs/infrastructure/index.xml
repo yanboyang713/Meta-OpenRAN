@@ -195,7 +195,19 @@ add bridge=bridge interface=bond1
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>&lt;a href="https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/">https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/&lt;/a>&lt;/p>
 &lt;/div>
-&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;h2 id="create-a-cluster">Create a Cluster&lt;/h2>
+&lt;p>Login via ssh to the first Proxmox VE node(DELL GPU Server) and run the following command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pvecm create NICE-LAB(CLUSTERNAME)
+&lt;/code>&lt;/pre>&lt;p>To check the state of the new cluster use:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pvecm status
+&lt;/code>&lt;/pre>&lt;h2 id="join-node-to-cluster">Join Node to Cluster&lt;/h2>
+&lt;p>Log in to the node you want to join into an existing cluster via ssh.&lt;/p>
+&lt;pre tabindex="0">&lt;code>pvecm add IP-ADDRESS-CLUSTER
+&lt;/code>&lt;/pre>&lt;p>For IP-ADDRESS-CLUSTER, use the IP or hostname of an existing cluster node. An IP address is recommended (see Link Address Types).&lt;/p>
+&lt;p>To check the state of the cluster use:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pvecm status
+&lt;/code>&lt;/pre>&lt;h2 id="reference-list">Reference List&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/">https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pve.proxmox.com/wiki/Cluster_Manager">https://pve.proxmox.com/wiki/Cluster_Manager&lt;/a>&lt;/li>
 &lt;/ol></description></item></channel></rss>
