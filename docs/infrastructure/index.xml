@@ -210,4 +210,13 @@ add bridge=bridge interface=bond1
 &lt;ol>
 &lt;li>&lt;a href="https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/">https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://pve.proxmox.com/wiki/Cluster_Manager">https://pve.proxmox.com/wiki/Cluster_Manager&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Docs: DNS</title><link>/docs/infrastructure/dns/</link><pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/dns/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>&lt;a href="https://docs.openvswitch.org/en/latest/topics/bonding/">https://docs.openvswitch.org/en/latest/topics/bonding/&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="static-dns-entries">Static DNS Entries&lt;/h2>
+&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://constellix.com/news/dns-record-types-cheat-sheet">https://constellix.com/news/dns-record-types-cheat-sheet&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:IP/DNS">https://wiki.mikrotik.com/wiki/Manual:IP/DNS&lt;/a>&lt;/li>
 &lt;/ol></description></item></channel></rss>
