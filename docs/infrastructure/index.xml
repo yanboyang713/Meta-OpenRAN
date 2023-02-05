@@ -191,4 +191,11 @@ add bridge=bridge interface=bond1
 &lt;ol>
 &lt;li>&lt;a href="https://docs.openvswitch.org/en/latest/topics/bonding/">https://docs.openvswitch.org/en/latest/topics/bonding/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://karneliuk.com/2021/08/infrastructure-1-building-virtualized-environment-with-debian-linux-and-proxmox-on-hp-and-supermicro/">https://karneliuk.com/2021/08/infrastructure-1-building-virtualized-environment-with-debian-linux-and-proxmox-on-hp-and-supermicro/&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Cluster</title><link>/docs/infrastructure/cluster/</link><pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/cluster/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>&lt;a href="https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/">https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/">https://www.wundertech.net/how-to-set-up-a-cluster-in-proxmox/&lt;/a>&lt;/li>
 &lt;/ol></description></item></channel></rss>
