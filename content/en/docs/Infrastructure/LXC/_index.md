@@ -9,6 +9,8 @@ description: >
 
 {{% pageinfo %}}
 LXC: https://www.yanboyang.com/lxccontainerproxmox/
+
+Helper Script: https://github.com/tteck/Proxmox/blob/main/ct/create_lxc.sh
 {{% /pageinfo %}}
 
 ## Introduction
