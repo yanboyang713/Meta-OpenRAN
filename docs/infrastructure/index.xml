@@ -239,6 +239,7 @@ add bridge=bridge interface=bond1
 &lt;/ol></description></item><item><title>Docs: LXC Container</title><link>/docs/infrastructure/lxc/</link><pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/lxc/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>LXC: &lt;a href="https://www.yanboyang.com/lxccontainerproxmox/">https://www.yanboyang.com/lxccontainerproxmox/&lt;/a>&lt;/p>
+&lt;p>Helper Script: &lt;a href="https://github.com/tteck/Proxmox/blob/main/ct/create_lxc.sh">https://github.com/tteck/Proxmox/blob/main/ct/create_lxc.sh&lt;/a>&lt;/p>
 &lt;/div>
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>Containers are a &lt;strong>lightweight&lt;/strong> alternative to fully virtualized machines (VMs). They use the kernel of the host system that they run on, instead of emulating a full operating system (OS). This means that containers can access resources on the host system directly.&lt;/p>
