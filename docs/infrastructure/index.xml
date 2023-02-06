@@ -219,4 +219,21 @@ add bridge=bridge interface=bond1
 &lt;ol>
 &lt;li>&lt;a href="https://constellix.com/news/dns-record-types-cheat-sheet">https://constellix.com/news/dns-record-types-cheat-sheet&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://wiki.mikrotik.com/wiki/Manual:IP/DNS">https://wiki.mikrotik.com/wiki/Manual:IP/DNS&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Docs: GPU</title><link>/docs/infrastructure/gpu/</link><pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gpu/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>&lt;a href="https://pve.proxmox.com/wiki/NVIDIA_vGPU_on_Proxmox_VE_7.x">https://pve.proxmox.com/wiki/NVIDIA_vGPU_on_Proxmox_VE_7.x&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="identifying-the-graphics-card-model-and-device-id">Identifying the Graphics Card Model and Device ID&lt;/h2>
+&lt;p>update your PCI ID database with:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo update-pciids
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">root@server2:~# lspci -nn | grep &amp;#39;\[03&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-style:italic">0000:5b:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3090] [10de:2204] (rev a1)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://pve.proxmox.com/wiki/NVIDIA_vGPU_on_Proxmox_VE_7.x">https://pve.proxmox.com/wiki/NVIDIA_vGPU_on_Proxmox_VE_7.x&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://cloud.google.com/compute/docs/gpus/grid-drivers-table">https://cloud.google.com/compute/docs/gpus/grid-drivers-table&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.nvidia.com/Download/index.aspx">https://www.nvidia.com/Download/index.aspx&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.com/polloloco/vgpu-proxmox">https://gitlab.com/polloloco/vgpu-proxmox&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.michaelstinkerings.org/using-vgpu-unlock-with-proxmox-7/">https://www.michaelstinkerings.org/using-vgpu-unlock-with-proxmox-7/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pve.proxmox.com/wiki/Pci_passthrough">https://pve.proxmox.com/wiki/Pci_passthrough&lt;/a>&lt;/li>
 &lt;/ol></description></item></channel></rss>
