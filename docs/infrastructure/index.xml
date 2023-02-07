@@ -59,6 +59,23 @@ Next, edit /etc/sudoers file using command:&lt;/p>
 &lt;/code>&lt;/pre>&lt;h2 id="reference-list">Reference List&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/">https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-arch-linux/&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Uni-WIFI</title><link>/docs/infrastructure/uniwifi/</link><pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/uniwifi/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>NCSU Nomad Registration System&lt;/p>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Our Gateway WIFI MAC Address: DC:2C:6E:3E:01:47 bind to Dr.yuchen liu&amp;rsquo;s Unity account for bypass ncsu wifi authorization&lt;/p>
+&lt;p>NCSU has a Nomad Registration System for devices using the unsecured and unencrypted wireless network, ncsu&lt;/p>
+&lt;p>Step 1: Go to &lt;a href="https://nomad.ncsu.edu/">https://nomad.ncsu.edu/&lt;/a>
+Step 2: Using Unity credentials to log in
+Step 3: Click Add Device
+&lt;img src="https://res.cloudinary.com/dkvj6mo4c/image/upload/v1675728734/screenshot/cz7qd4j8ml8da9ddqvhz.png" alt="">&lt;/p>
+&lt;p>Step 4: Filed in MAC address with Description
+&lt;img src="http://res.cloudinary.com/dkvj6mo4c/image/upload/v1675728787/screenshot/cgxklasizviqi4w0vame.png" alt="">&lt;/p>
+&lt;p>NOTE: You must be on campus, connected to either the ncsu or eduroam wireless networks, to complete the registration.&lt;/p>
+&lt;h2 id="reference-list">Reference List&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://nomad.ncsu.edu/">https://nomad.ncsu.edu/&lt;/a>&lt;/li>
 &lt;/ol></description></item><item><title>Docs: Gateway</title><link>/docs/infrastructure/gateway/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/gateway/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>In this section, all related to how to a NAT gateway.&lt;/p>
@@ -309,4 +326,18 @@ You &lt;strong>Proxmox&lt;/strong> Container is ready.&lt;/p>
 &lt;h2 id="reference-list">Reference List&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://pve.proxmox.com/wiki/Linux_Container">https://pve.proxmox.com/wiki/Linux_Container&lt;/a>&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;/ol></description></item><item><title>Docs: Backup</title><link>/docs/infrastructure/backup/</link><pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate><guid>/docs/infrastructure/backup/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>mikrotik RouterOS license backup
+&lt;a href="https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/">https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>mikrotik RouterOS System backup
+&lt;a href="https://wiki.mikrotik.com/wiki/Manual:System/Backup">https://wiki.mikrotik.com/wiki/Manual:System/Backup&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference-list">Reference List&lt;/h2></description></item></channel></rss>
