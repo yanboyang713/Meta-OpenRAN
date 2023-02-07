@@ -79,11 +79,6 @@ https://res.cloudinary.com/dkvj6mo4c/image/upload/v1666064185/Open-RAN/Edge-Clou
 
 
 
-+ mikrotik RouterOS license backup
-https://techoverflow.net/2022/08/23/how-to-backup-mikrotik-routeros-license-to-a-file/
-
-+ mikrotik RouterOS System backup
-https://wiki.mikrotik.com/wiki/Manual:System/Backup
 
 + Mikrotik RouterOS connect Uni WIFI: eduroam
 When you done, login Yuchen account
